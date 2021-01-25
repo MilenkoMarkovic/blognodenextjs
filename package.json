@@ -11,8 +11,8 @@
     "url": "git+https://github.com/MilenkoM/blog-node-next.js.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Milenko Markovic",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/MilenkoM/blog-node-next.js/issues"
   },
