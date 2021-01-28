@@ -1,4 +1,3 @@
-
 const next = require('next');
 
 const dev = process.env.NODE_ENV !== 'production';
@@ -15,8 +14,6 @@ module.exports = (async server => {
     });
     server.originalListen = server.listen;
     server.listen = (port) => {
-        // If none of the custom routing handlers from express are hit,
-        // defer to next's own handler.
         server.get('*', (req, res) => {
             req.handle(req, res);
         });

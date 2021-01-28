@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
 import axios from 'axios';
+import React, { useState } from 'react';
 
 const SigninComponent = () => {
     const [values, setValues] = useState({
         email: 'berlusconi@gmail.com',
-        password; '000prctoo'
+        password: '000prctoo9'
     });
 
     const { email, password } = values;
 
-    const handleSubmit = e => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         const { email, password } = values;
