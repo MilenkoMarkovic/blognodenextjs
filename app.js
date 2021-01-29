@@ -38,16 +38,11 @@ app.use('/api/v1/blogpost', blogpost);
 app.use('/api/v1/users', users);
 app.use('/api/v1/comments', comments);
 
-const PORT = process.env.PORT || 5000;
+const port = process.env.PORT || 5000;
 
 const start = async (port) => {
     await next(app);
-
-    app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`));
-
-    app.get('/main', (req, res) => req.app.render(req, res, '/auth/signup', {
-        routeParam: req.params.routeParam
-    }));
+    app.listen(port);
 }
 
 start(5000);
