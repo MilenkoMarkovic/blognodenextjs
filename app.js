@@ -42,7 +42,10 @@ const port = process.env.PORT || 5000;
 
 const start = async (port) => {
     await next(app);
-    app.listen(port);
+    app.listen(port,(err)=> {
+        if (err) throw err
+        console.log('server listening on http://localhost:5000')
+    });
 }
 
 start(5000);
