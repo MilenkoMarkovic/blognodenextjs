@@ -17,7 +17,7 @@ const SignupComponent = () => {
         const { username, name, email, password } = values;
         const user = {username, name, email, password};
 
-        await axios.post(`${API}/auth`, user);  
+        await axios.post(`${API}/api/v1/auth/signup`, user);  
 
     };
 
