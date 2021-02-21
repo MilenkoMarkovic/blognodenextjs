@@ -47,3 +47,7 @@ const start = async (port) => {
 }
 
 start(5000);
+function newFunction() {
+    return '/api/v1/auth';
+}
+

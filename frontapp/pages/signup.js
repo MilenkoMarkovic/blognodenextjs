@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import Link from 'next/link';
 import Layout from '../components/Layout';
 import SignupComponent from '../components/frontauth/SignupComponent';

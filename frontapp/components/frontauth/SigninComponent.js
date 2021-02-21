@@ -1,11 +1,14 @@
+/* eslint-disable no-undef */
 import axios from 'axios';
 import React, { useState } from 'react';
+import { API } from '../../config';
 
 const SigninComponent = () => {
     const [values, setValues] = useState({
-        email: 'berlusconi@gmail.com',
-        password: '000prctoo9'
+        email: '',
+        password: ''
     });
+    const [loading, setLoading] = useState(false);
 
     const { email, password } = values;
 
@@ -14,7 +17,7 @@ const SigninComponent = () => {
 
         const { email, password } = values;
         const user = { email, password};
-        await axios.post(`${API}/signin`, user);
+        await axios.post(`${API}/api/v1/auth/signin`, user);
 
     };
 
@@ -24,7 +27,7 @@ const SigninComponent = () => {
 
     const showLoading = () => (loading ? <div className="alert alert-info">Loading...</div> : '');
 
-    const SigninForm = () => {
+    const signinForm = () => {
         return (
             <form onSubmit={handleSubmit}>
                 
@@ -57,7 +60,7 @@ const SigninComponent = () => {
 
     return <React.Fragment>
     {showLoading()}
-    {signupForm()} 
+    {signinForm()} 
      </React.Fragment>;
 };
 
