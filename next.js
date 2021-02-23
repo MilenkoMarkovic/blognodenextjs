@@ -10,7 +10,6 @@ module.exports = (async server => {
     server.use('/', (req, res, n) => {
         req.app = app;
         req.handle = handle;
-        console.log(req);
         n();
     });
     server.originalListen = server.listen;

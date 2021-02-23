@@ -17,7 +17,7 @@ const SigninComponent = () => {
 
         const { email, password } = values;
         const user = { email, password};
-        await axios.post(`${API}/api/v1/auth/signin`, user);
+        await axios.post(`${API}/api/v1/auth/login`, user);
 
     };
 
