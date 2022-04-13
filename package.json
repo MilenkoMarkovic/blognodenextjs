@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/MilenkoM/blognodenextjs#readme",
   "dependencies": {
+    "axios": "^0.25",
     "autoprefixer": "^10.2.3",
     "bcryptjs": "^2.4.3",
     "caniuse-lite": "^1.0.30001179",
